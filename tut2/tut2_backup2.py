@@ -169,21 +169,21 @@ layer_conv1, weights_conv1 = new_conv_layer(input=x_image,
     num_input_channels=num_channels,
     filter_size=filter_size1,
     num_filters=num_filters1,
-    use_pooling=False)
+    use_pooling=True)
 
 # Convolutional Layer 2
 layer_conv2, weights_conv2 = new_conv_layer(input=layer_conv1,
     num_input_channels=num_filters1,
     filter_size=filter_size2,
     num_filters=num_filters2,
-    use_pooling=False)
+    use_pooling=True)
 
 # Convolutional Layer 3
 layer_conv3, weights_conv3 = new_conv_layer(input=layer_conv2,
-	num_input_channels=num_filters2,
-	filter_size=filter_size3,
-	num_filters=num_filters3,
-	use_pooling=False)
+    num_input_channels=num_filters2,
+    filter_size=filter_size3,
+    num_filters=num_filters3,
+    use_pooling=True)
 
 # Flatten Layer
 layer_flat, num_features = flatten_layer(layer_conv3)
@@ -410,7 +410,7 @@ def print_test_accuracy(show_example_errors=False,
         plot_confusion_matrix(cls_pred=cls_pred)
 
 #
-#	Performance before any optimization
+#   Performance before any optimization
 #
 
 print_test_accuracy()
