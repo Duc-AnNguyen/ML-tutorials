@@ -431,26 +431,3 @@ print_test_accuracy()
 optimize(num_iterations=9000)
 print_test_accuracy()
 print_test_accuracy(show_example_errors=True, show_confusion_matrix=True)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
