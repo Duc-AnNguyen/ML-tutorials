@@ -1,0 +1,5 @@
+Iter:   7300, Train-Batch Accuracy: 100.0%, Validation Acc:  98.7% 
+no improvement found in the required number of iterations
+Time usage: 0:16:30
+Accuracy on Test-Set: 98.8% (9881 / 10000)
+Accuracy on Test-Set: 98.8% (9880 / 10000)
