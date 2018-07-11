@@ -1,0 +1,42 @@
+model1:
+loss 0.06593851799890399
+acc 0.9795
+acc: 97.95%
+
+model2:
+loss 0.05514291409696452
+acc 0.9814
+acc: 98.14%
+
+-> sigmod for all conv layer
+
+model1:
+loss 0.49361965370178224
+acc 0.8469
+acc: 84.69%
+
+model2:
+loss 0.5113379250526429
+acc 0.8435
+acc: 84.35%
+
+-> Stride 2:
+model1:
+loss 0.09166847928315401
+acc 0.9708
+acc: 97.08%
+
+loss 0.07295982977901586
+acc 0.9781
+acc: 97.81%
+
+-> add an Conv layer
+
+loss 0.05575136033876334
+acc 0.9822
+acc: 98.22%
+
+
+loss 0.053257799622230234
+acc 0.982
+acc: 98.20%
