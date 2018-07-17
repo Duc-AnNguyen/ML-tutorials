@@ -14,14 +14,20 @@ import prettytensor as pt
 #
 #   Load data
 #
-import knifey
-from knifey import num_classes
+# import knifey
+# from knifey import num_classes
+#
+# knifey.data_dir = '../data/knifey-spoony'
+# data_dir = knifey.data_dir
+# knifey.maybe_download_and_extract()
+# dataset = knifey.load()
 
-knifey.data_dir = '../data/knifey-spoony'
-data_dir = knifey.data_dir
-knifey.maybe_download_and_extract()
-dataset = knifey.load()
+data_dir = '../data/myown'
 
+from dataset import load_cached
+dataset = load_cached(cache_path='../data/myown/myown_cache.pkl',
+                      in_dir= data_dir)
+num_classes = dataset.num_classes
 # Training and Test-sets
 class_names = dataset.class_names
 
@@ -107,8 +113,8 @@ model = inception.Inception()
 # Calculate Transfer-Values
 from inception import transfer_values_cache
 
-file_path_cache_train = os.path.join(data_dir, 'inception-knifey-train.pkl')
-file_path_cache_test = os.path.join(data_dir, 'inception-knifey-test.pkl')
+file_path_cache_train = os.path.join(data_dir, 'inception-myown-train.pkl')
+file_path_cache_test = os.path.join(data_dir, 'inception-myown-test.pkl')
 
 # Process Inception transfer-values for training-images
 transfer_values_train = transfer_values_cache(cache_path=file_path_cache_train,
@@ -437,6 +443,6 @@ def print_test_accuracy(show_example_errors=False,
 #
 print_test_accuracy(show_example_errors=False,
                     show_confusion_matrix=False)
-optimize(num_iterations=4000)
-print_test_accuracy(show_example_errors=True,
-                    show_confusion_matrix=True)
+optimize(num_iterations=1000)
+print_test_accuracy(show_example_errors=False,
+                    show_confusion_matrix=False)
